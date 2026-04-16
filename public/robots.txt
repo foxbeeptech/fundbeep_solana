@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Private / authenticated pages — no SEO value
+Disallow: /#dashboard
+Disallow: /#admin
+Disallow: /#profile
+Disallow: /#kyc
+Disallow: /#wizard
+
+# Sitemap
+Sitemap: https://fundbeep.com/sitemap.xml

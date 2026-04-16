@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1628"/>
+      <stop offset="60%" style="stop-color:#0D3B6E"/>
+      <stop offset="100%" style="stop-color:#1A6FAF"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A9ECF"/>
+      <stop offset="100%" style="stop-color:#0A4A7C"/>
+    </linearGradient>
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4DD9F5"/>
+      <stop offset="100%" style="stop-color:#0078B8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="18" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip"><rect width="1200" height="630"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="url(#sky)"/>
+
+    <!-- Stars -->
+    <circle cx="120" cy="60" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="340" cy="40" r="1" fill="white" opacity="0.5"/>
+    <circle cx="580" cy="25" r="1.5" fill="white" opacity="0.7"/>
+    <circle cx="820" cy="55" r="1" fill="white" opacity="0.4"/>
+    <circle cx="1050" cy="30" r="1.5" fill="white" opacity="0.6"/>
+    <circle cx="200" cy="90" r="1" fill="white" opacity="0.4"/>
+    <circle cx="950" cy="80" r="1" fill="white" opacity="0.5"/>
+    <circle cx="1150" cy="70" r="1.5" fill="white" opacity="0.6"/>
+
+    <!-- Moon / light orb -->
+    <circle cx="980" cy="110" r="55" fill="#1E5FA0" opacity="0.4"/>
+    <circle cx="980" cy="110" r="38" fill="#2E7ABF" opacity="0.5"/>
+    <circle cx="980" cy="110" r="24" fill="#58AAE8" opacity="0.7" filter="url(#glow)"/>
+
+    <!-- Water surface waves -->
+    <path d="M0 400 Q150 370 300 400 Q450 430 600 400 Q750 370 900 400 Q1050 430 1200 400 L1200 630 L0 630 Z" fill="url(#water)" opacity="0.95"/>
+    <path d="M0 420 Q200 395 400 420 Q600 445 800 420 Q1000 395 1200 420 L1200 630 L0 630 Z" fill="#0E568F" opacity="0.8"/>
+    <path d="M0 450 Q250 430 500 450 Q750 470 1000 450 Q1100 440 1200 450 L1200 630 L0 630 Z" fill="#0A3F6A" opacity="0.9"/>
+
+    <!-- Wave shimmer lines -->
+    <path d="M0 408 Q100 400 200 408 Q300 416 400 408 Q500 400 600 408" stroke="#5FC8F0" stroke-width="1.5" fill="none" opacity="0.4"/>
+    <path d="M600 428 Q700 420 800 428 Q900 436 1000 428 Q1100 420 1200 428" stroke="#5FC8F0" stroke-width="1.5" fill="none" opacity="0.3"/>
+
+    <!-- Large water drop (center-left) -->
+    <g transform="translate(160, 140)" filter="url(#softGlow)">
+      <path d="M60 0 C60 0 0 80 0 110 C0 143 27 170 60 170 C93 170 120 143 120 110 C120 80 60 0 60 0Z" fill="url(#dropGrad)" opacity="0.95"/>
+      <!-- Shine -->
+      <ellipse cx="42" cy="90" rx="12" ry="22" fill="white" opacity="0.25" transform="rotate(-15, 42, 90)"/>
+      <circle cx="38" cy="78" r="6" fill="white" opacity="0.18"/>
+    </g>
+
+    <!-- Small decorative drops -->
+    <g transform="translate(320, 220)" opacity="0.7">
+      <path d="M18 0 C18 0 0 24 0 33 C0 43 8 51 18 51 C28 51 36 43 36 33 C36 24 18 0 18 0Z" fill="#4DD9F5"/>
+    </g>
+    <g transform="translate(90, 280)" opacity="0.5">
+      <path d="M13 0 C13 0 0 17 0 24 C0 31 6 37 13 37 C20 37 26 31 26 24 C26 17 13 0 13 0Z" fill="#7AE8FF"/>
+    </g>
+
+    <!-- Ripple rings -->
+    <ellipse cx="600" cy="415" rx="280" ry="18" stroke="#5FC8F0" stroke-width="1.5" fill="none" opacity="0.25"/>
+    <ellipse cx="600" cy="415" rx="200" ry="12" stroke="#5FC8F0" stroke-width="1" fill="none" opacity="0.2"/>
+
+    <!-- Main text -->
+    <text x="600" y="195" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle" filter="url(#glow)" opacity="0.95">Clean Water for Every Child</text>
+
+    <!-- Subtitle -->
+    <text x="600" y="248" font-family="Arial, sans-serif" font-size="22" fill="#A8D8F0" text-anchor="middle" opacity="0.9">Bringing safe drinking water to 12,000 families in rural Nepal</text>
+
+    <!-- Divider line -->
+    <line x1="460" y1="272" x2="740" y2="272" stroke="#4DD9F5" stroke-width="1.5" opacity="0.5"/>
+
+    <!-- Stats row -->
+    <g transform="translate(350, 305)">
+      <!-- SOL raised -->
+      <rect x="0" y="0" width="155" height="58" rx="12" fill="white" opacity="0.08"/>
+      <rect x="0" y="0" width="155" height="58" rx="12" stroke="#4DD9F5" stroke-width="1" fill="none" opacity="0.3"/>
+      <text x="77" y="22" font-family="Arial, sans-serif" font-size="11" fill="#A8D8F0" text-anchor="middle" opacity="0.8">SOL RAISED</text>
+      <text x="77" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">350 ◎</text>
+
+      <!-- Families -->
+      <rect x="175" y="0" width="155" height="58" rx="12" fill="white" opacity="0.08"/>
+      <rect x="175" y="0" width="155" height="58" rx="12" stroke="#4DD9F5" stroke-width="1" fill="none" opacity="0.3"/>
+      <text x="252" y="22" font-family="Arial, sans-serif" font-size="11" fill="#A8D8F0" text-anchor="middle" opacity="0.8">FAMILIES HELPED</text>
+      <text x="252" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle">12,000+</text>
+
+      <!-- Goal -->
+      <rect x="350" y="0" width="155" height="58" rx="12" fill="white" opacity="0.08"/>
+      <rect x="350" y="0" width="155" height="58" rx="12" stroke="#4DD9F5" stroke-width="1" fill="none" opacity="0.3"/>
+      <text x="427" y="22" font-family="Arial, sans-serif" font-size="11" fill="#A8D8F0" text-anchor="middle" opacity="0.8">GOAL MET</text>
+      <text x="427" y="46" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#4ADE80" text-anchor="middle">100% ✓</text>
+    </g>
+
+    <!-- Bottom tag -->
+    <rect x="480" y="378" width="240" height="32" rx="16" fill="#1A9ECF" opacity="0.3"/>
+    <rect x="480" y="378" width="240" height="32" rx="16" stroke="#4DD9F5" stroke-width="1" fill="none" opacity="0.5"/>
+    <text x="600" y="399" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#A8D8F0" text-anchor="middle" letter-spacing="2">FUNDED ON SOLANA · FUNDBEEP</text>
+
+    <!-- FundBeep branding bottom right -->
+    <text x="1165" y="612" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="end" opacity="0.4">fundbeep.com</text>
+  </g>
+</svg>
